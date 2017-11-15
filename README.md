@@ -4,9 +4,27 @@ OxShef is a joint collaboration between the [Interactive Data Network of Univers
 
 > Promote, support and teach researchers about how interactive data visualisation can aid in increasing the impact and engagement with research outputs
 
-We have a network of websites hosted on Github Pages to achieve this goal, the most generally useful to all researchers is:
+We have a network of websites hosted on Github Pages to help achieve this goal, all OxShef content is written to be as generally useful as possible. However, some services discussed on our websites are only available to researchers at University of Oxford or/and University of Sheffield.
 
-- [OxShef: Charts](https://github.com/OxShef/oxshef_charts): An overview of common data visualisation charts, maps, graphs and more. Use this website to help pick which visualisations best suit your data and for advice on avoiding common pitfalls or complications in data visualisation
+# What visualisation should I use?
+
+[OxShef: Charts](https://github.com/OxShef/oxshef_charts) provides an overview of common data visualisation charts, maps, graphs and more. Use this website to help pick which visualisations best suit your data and for advice on avoiding common pitfalls or complications in data visualisation
+
+# What visualisation tool can I use?
+
+OxShef has dedicated sites for the following visualisation tools
+
+| Visualisation Tool  | Type of Tool | Brief Description |
+| ------------- | ------------- | --- |
+| Python | Scripting language | You can build interactive data visualisations fairly easily using Python on your local machine, but hosting these online typically requires researchers to invest a few hours in learning about server configuration to use the tools mentioned below. |
+| R | Scripting language | You can easily build interactive data visualisations using R on your local machine and there are several ways these can be published online for free, provided they're made public but there are limits on what you can do for free. |
+
+# Where/how can I host visualisations online?
+
+| Hosting Tool  | Language / Tool | Description | Support for Researchers at Oxford / Sheffield
+| ------------- | ------------- | --- | --- |
+| Dash | Python | Dash allows interactive web applications to be built exclusively using Python code. **READ MORE** | - Researchers at University of Sheffield can contact xxx@shef.ox.ac.uk for support |
+| Shiny | R | Shiny allows interactive web applications to be built exclusively using R code, a free tier is available. **READ MORE** | - Researchers at University of Oxford can host Shiny apps with the [Interactive Data Network](idn.it.ox.ac.uk) |
 
 # Copyright and License 
 

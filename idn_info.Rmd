@@ -19,100 +19,40 @@ knitr::opts_chunk$set(
 
 <div class='row'>
 
-<div class="col-md-4 align-self-center">
+<div class="col-sm-4 align-self-center">
 
 <center>
 
-<img src="images/idn_logo.png" width="250px">
+<img src="images/idn_logo.png" width="300px">
 
 </center>
 
 
 </div>
 
-<div class="col-md-8 align-self-center">
+<div class="col-sm-8 align-self-center">
 
-The Interactive Data Network provides specialist support and advice for researchers at University of Oxford in the use of the XXX service described in this website.
+The [Interactive Data Network](http://idn.it.ox.ac.uk) provides specialist support and advice for researchers at University of Oxford in the use of the interactive data visualisations. The IDN sits inside of Academic Support IT, which provides a more general advice service on research data management to researchers.
 
-You may wish to refer to the dedicated [IDN website](idn.it.ox.ac.uk) for more information about all support available to Oxford researchers in designing, creating and hosting interactive data visualisations of research outputs.
-
-</div>
+To contact the IDN team please email us at <researchsupport@it.ox.ac.uk> and we'll get back to you ASAP to arrange a virtual or in person meeting at your building or IT Services on Banbury Road.
 
 </div>
 
-# rmd_template_support
-
-If you want to add a new service to the OxShef collaboration using this [oxshef_rmd_template](github.com/OxShef/oxshef_rmd_template) and are resident at University of Oxford, please contact researchsupport@it.ox.ac.uk
-
-Note that there is not necessarily enough space in the horiztonal navigation for links for researchers at Oxford and/or Sheffield, this template therefore makes available the following Bootstrap alert that may be easily included in the YAML header as follows:
-
-```yaml
-output:
-  html_document:
-    toc_float: false
-    includes:
-      before_body: [includes/include_header.html, includes/include_institutional-support.html]
-```
-
-<!--html_preserve-->
-
-<div class="alert alert-info alert-dismissible" role="alert">
-
-
-<div class='container-fluid'>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-</div>
-<div class='row'>
-
-  <div class='col-md-6 align-self-center'>
-
-
- <div class='row'>
-
-  <div class='col-sm-6 align-self-center'>
-
-      <span>Researchers at <strong>University of Oxford</strong> can use the ORDA service XXX to host interactive visualisations produced with XXX.</span>
-See <a href='idn_info.html' style='color:#fff;font-weight:bold'>here for further details</a>.</span>
-
-    </div>
-
-  <div class='col-sm-6 align-self-center'>
-
-<center>
-    <img src='images/idn_logo.png' width='250px'></img>
-</center>
-    </div>
-
-
-  </div>
-
 </div>
 
-  <div class='col-md-6 align-self-center'>
+# Support for Oxford Researchers
 
-    <div class='row'>
+The OxShef project is a collaboration between Oxford and Sheffield to provide advice on using interactive data visualisation for all academics/researchers - independent of their home institution. However, there are a number of hosting services that the IDN provides exclusively for researchers at Oxford. 
 
-  <div class='col-sm-6 align-self-center'>
+## Shiny apps hosting {.tabset}
 
-      <span>Researchers at <strong>University of Sheffield</strong> can use the ORDA service XXX to host interactive visualisations produced with XXX.</span>
-See <a href='orda_info.html' style='color:#fff;font-weight:bold'>here for further details</a>.</span>
+Shiny allows users of R to create web applications without learning HTML, CSS or JavaScript - learn more at the dedicated Shiny website.
 
-    </div>
+The IDN will host Shiny apps developed by (or on behalf of) Oxford researchers provided they meet the following requirements:
 
-  <div class='col-sm-6 align-self-center'>
-<center>
-    <img src='images/rse-sheffield_logo.png' width='250px'></img>
-</center>
-    </div>
+- The Shiny app visualises/explains research outputs of Oxford researchers
+- All data displayed by the app is deposited in (and accessed from) a DOI issuing data repository
+- The code for the Shiny app is also deposited in a DOI issuing data repository
+- The Shiny app contains the DOI for the underlying code and data
 
-
-  </div>
-
-  </div>
-
-</div>
-
-
-</div>
-
-<!--/html_preserve-->
+Please visit the dedicated [IDN Showcase](https://idn.it.ox.ac.uk/visualisation-showcase) for examples of Shiny apps built and hosted by the IDN.

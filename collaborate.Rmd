@@ -1,0 +1,80 @@
+---
+output:
+  html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+OxShef is a collaboration between the IDN at University of Oxford and ORDA at University of Sheffield to support researchers in using interactive data visualisations to communicate research data and to increase the impact and engagement of the public with research outputs.
+
+All of our websites are built using GitHub and GitHub pages, we thoroughly welcome contributions to all of our websites through pull requests! Here's a link to our [OxShef GitHub Organisation](https://github.com/OxShef) where you can find all of our repositories.
+
+If you're new to Github then the following resources might be useful:
+
+- Github's ["Hello World" tutorial](https://guides.github.com/activities/hello-world/)
+- Lynda.com's [Intro to Git and Github](https://www.lynda.com/Git-tutorials/Up-Running-Git-GitHub/409275-2.html) (Special links: [Oxford researchers](https://www.lynda.com/Git-tutorials/Up-Running-Git-GitHub/409275-2.html?org=ox.ac.uk), [Sheffield researchers](https://www.lynda.com/course/shareredirect/409275?org=sheffield.ac.uk))
+
+<hr>
+
+## Academic Publishers
+
+OxShef provides advice to researchers on which publishers support the embedding of interactive data visualisations alongisde publications, for instance:
+
+- F1000 announced [support for embedding plotly charts](https://blog.f1000.com/2017/07/19/so-long-static-we-now-support-interactive-ploty-figures-in-our-articles/) in July 2017
+- Wellcome Open Research supports [embedding Shiny apps in publications](https://wellcomeopenresearch.org/articles/2-26/v1)
+
+[OxShef hosts biannual events](https://idn.it.ox.ac.uk/events-and-news) that intersect researchers' and publishers' interests in visualisations and attempt to find common ground and goals for bridging the data gap with visualisations. OxShef has collaborated with the following organisations and institutions:
+
+<div class="row align-items-center">
+<div class="col-xs-4 align-self-center">
+- eLife
+- John Wiley
+- Elsevier
+- Wellcome Open Research
+- Taylor & Francis
+- Sage Publishing
+- OUP
+
+</div>
+
+<div class="col-xs-4 align-self-center">
+- BBC
+- Financial Times
+- ONS
+- Figshare
+- OSF
+
+</div>
+</div>
+
+If you're interested in joining us at these events or working with us to promote your support for innovative data visualisation solutions, please email us at <researchsupport@it.ox.ac.uk> and <rse@sheffield.ac.uk>. 
+
+<hr>
+
+## Academic Partners
+
+If you're working in another academic institution and would like to collaborate with OxShef then please do get in touch. Both the IDN and ORDA support similar hosting solutions for the visualisation tools discussed in these websites and have deliberately designed and documented our approach so that others can replicate our success. Please email us at <researchsupport@it.ox.ac.uk> and <rse@sheffield.ac.uk>.
+
+<hr> 
+<div class="row align-items-center">
+    
+<div class="col-xs-6 align-self-center">
+<center>
+<img style="max-width:340px" src="images/idn_logo.png"/>
+</center>
+</div>
+        
+<div class="col-xs-6 align-self-center">
+<center>
+<img style="max-width:340px" src="images/rse-sheffield_logo.png"/>
+</center>
+ </div>
+</div>

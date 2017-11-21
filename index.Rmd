@@ -1,61 +1,88 @@
 ---
-title: "OxShef: RMarkdown Template Site"
+title: "OxShef"
 output:
   html_document:
     toc_float: false
-    includes:
-      before_body: [includes/include_header.html, includes/include_institutional-support.html]
+editor_options: 
+  chunk_output_type: console
 ---
 
-This is a template RMarkdown website for the OxShef project, please consider using this template if you are adding a new website to the project that will be written using RMarkdown files.
-
-Current websites in OxShef that use this template include:
-
-- [OxShef Charts](https://oxshef.github.io/oxshef_charts/): A guide to different visualisation options for visualising research data
-
-There is a more thorough overview of the features of this website template (and how to use it) in the [github readme](https://github.com/OxShef/oxshef_rmd_template). 
-
-<hr>
-
-# Site Features
-
-- Bootstrap 4.0: Bootstrap is an awesome framework for building responsively designed websites, i.e. content that *reflows* as the size of the browser window changes, beautifully supporting a wide range of mobile devices. The main utility of Bootstrap in this template is for laying out grids, an example of which you can see above.
-
-- includes/include_institutional-support.html: The purple alert at the top of this page contains links to institutional support for the service/tool described within the website itself, linking to idn_info.html and orda_info.html respectively. Note that this is optionall included in the YAML header as follows:
-
-```yaml
-output:
-  html_document:
-    toc_float: false
-    includes:
-      before_body: [includes/include_header.html, includes/include_institutional-support.html]
-```
-
-
-<hr>
-
-
-# Bootstrap grid example
-
-
-
 <div class="row align-items-center">
-
+    
 <div class="col-md-6 align-self-center">
 
-Note that HTML to can be included verbatim within the .Rmd files that generate each webpage, however the markdown engine does interpret content within HTML tags. This allows Markdown like this \*\*bold\*\* to be used to **embolden** text.
+OxShef promotes and supports the use of interactive data visualisations for communicating research datasets and outputs, our motivations are as follows:
 
-To guaranantee that HTML is rendered without any *attempted magic* you can make use of these special comments around the html:
+- Interactive visualisations provide an exploratory tool to your audience, rather than fixed narratives provided by traditional communication tools
 
-&lt;--html_preserve--&gt;
+- Interactive visualisations can be designed to provide different experiences for expert and non-expert audiences
 
-&lt;--/html_preserve--&gt;
+- Interactive visualisations help bridge the "data gap" as the underlying research data must be deposited in a DOI issuing repository.
+
+OxShef is a collaboration between the [Interactive Data Network at University of Oxford](idn_info.html) and [ORDA at University of Sheffield](orda_info.html). There's hands on support and visualisation hosting services available for researchers at these institutions.
 
 </div>
-
+        
 <div class="col-md-6 align-self-center">
+<center>
+<img style="max-width:340px" src="images/idn_logo.png"/>
+<img style="max-width:340px" src="images/rse-sheffield_logo.png"/>
+</center>
+ </div>
+</div>
+          
+<hr>
 
-This section of the site should appear either directly to the right or underneath the information about `html_preserve` tags, as it is in another column of the bootstrap grid. The choropleth you can see below this text was generated using `R` and the `leaflet` htmlwidget library:
+<div class="row align-items-center">
+    
+<div class="col-xs-6 align-self-center">
+
+## Which chart should I use?
+
+[OxShef: Charts](oxshef.github.io/oxshef_charts) provides an overview of commonly used data visualisations by researchers at Oxford and Sheffield, these include:
+
+- Charts (barcharts, piecharts, bubble charts)
+- Maps (scattergeo, choropleth, meteorological charts)
+- Time series (financial charts, time series)
+- Networks
+
+[OxShef: Charts](oxshef.github.io/oxshef_charts) provides advice on how to select the most appropriate charts for your data and how to avoid common mistakes when visualising data. There are dedicated websites to how to build visualisations with specific tools:
+
+- R and htmlwidgets (coming soon)
+- Python and Jupyter notebooks (coming soon)
+
+</div>
+        
+<div class="col-xs-6 align-self-center">
+
+## Where can I host visualisations?
+
+OxShef has dedicated websites for a wide range of different visualisation hosting services, all services must meet these minimum requires:
+
+- Data behind publications can easily be cited
+- Visualisations can easily be embedded in websites
+
+Our websites currently include:
+
+- Shiny: Interactive visualisations built with R
+- Dash: Interactive visualisations built with Python
+
+Typically, if there's a website about a hosting service then there'll be dedicated support for researchers at University of Oxford and/or University of Sheffield. Refer to the [IDN](idn_info.html) and [ORDA](orda_info.html) pages for a full list of services available to you.
+
+</div>
+</div>
+
+<hr>
+
+## Example charts
+
+The visualisations below are examples of what you can build by following the tutorials and advice within the OxShef websites.
+
+<div class="row align-items-center">
+    
+<div class="col-md-4 align-self-center">
+
+<center>
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
 library("tilegramsR")
@@ -80,7 +107,7 @@ leaflet(
     minZoom = -3, maxZoom = -3,
     dragging = FALSE, zoomControl = FALSE,
     attributionControl = FALSE),
-  width = "300px",
+  width = "350px",
           height = "200px"
   ) %>%
   addPolygons(
@@ -92,33 +119,200 @@ leaflet(
     ) 
 ```
 
+<br>
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+library("tidyverse")
+library("leaflet")
+library("sf")
+library("gapminder")
+
+geojson_worldmap <- st_read("https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json",
+                            quiet = TRUE)
+geojson_worldmap <- invisible(geojson_worldmap %>%
+  left_join(gapminder %>%
+               filter(year == max(year)) , by = c("name" = "country")) %>%
+  filter(name != "Antarctica"))
+palette_pop <- colorNumeric("YlOrBr" , geojson_worldmap$pop, na.color = "#c0c1c4")
+geojson_worldmap %>%
+  leaflet(width = "350px",
+          height = "200px") %>%
+  addPolygons(fillColor = ~palette_pop(pop),
+              fillOpacity = 0.8,
+              color = "#000",
+              weight = 1,
+              label = ~name)
+```
+
+<br>
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+quakes %>% 
+  leaflet( width = "350px",
+          height = "200px") %>%
+  addProviderTiles(providers$Esri.OceanBasemap) %>%
+  addCircleMarkers(clusterOptions = markerClusterOptions())
+```
+
+</center>
+
 </div>
+
+<div class="col-md-4 align-self-center">
+<center>
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+library("gapminder")
+library("highcharter")
+gapminder %>%
+  group_by(continent, year) %>%
+  summarise(median.life.exp = median(lifeExp)) %>%
+  hchart(type = "scatter",
+         hcaes(x = year, y = median.life.exp, group = continent)) %>%
+  hc_size(width = "350px", height = "200px") %>%
+  hc_subtitle(text = "Median life expectancy per continent (Source: Gapminder)") %>%
+  hc_yAxis(title = list(text = "Life expectancy"))
+```
+
+<br>
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+library("highcharter")
+library("tidyverse")
+my_data <- tribble(
+  ~category, ~value,
+  "human", 3,
+  "non-human", 4,
+  "snake", 6,
+  "iguana", 8
+)
+my_data %>%
+  hchart(
+    type = "pie",
+    hcaes(
+      x = category,
+      y = value
+    )
+  ) %>%
+  hc_plotOptions(pie = list(dataLabels = list(enabled = FALSE))) %>%
+  hc_size(width = "350px", height = "200px")
+```
+
+<br>
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+library("highcharter")
+library("tidyverse")
+my_data <- tribble(
+  ~category, ~subcategory, ~value,
+  "Mammal", "human", 3,
+  "Mammal", "non-human", 4,
+  "Reptile", "snake", 6,
+  "Reptile", "iguana", 8
+)
+my_data %>%
+  hchart(
+    type = "bar",
+    hcaes(
+      x = category,
+      y = value,
+      group = subcategory
+    )
+  ) %>%
+  hc_size(width = "350px", height = "200px") %>%
+  hc_plotOptions(series = list(stacking = "percent")) %>%
+  hc_title(text = "Stacked percentage barchart",
+           style = list(fontSize = 12))
+```
+
+</center>
+
 </div>
 
-<hr>
+<div class="col-md-4 align-self-center">
 
-# About OxShef
+<center>
 
-OxShef is a collaboration between the [Interactive Data Network of University of Oxford](idn.it.ox.ac.uk) and [Research Software Engineering at University of Sheffield](http://rse.shef.ac.uk/)
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+library("tidyverse")
+library("visNetwork")
+library("igraph")
 
-<!--html_preserve-->
+my_nodes <- tribble(
+  ~id, ~label, ~color, ~size,
+  1, "Character A", "purple", 10,
+  2, "Character B", "purple", 13,
+  3, "Character C", "orange", 17,
+  4, "Character D", "orange", 12,
+  5, "Character E", "purple", 17,
+  6, "Character Z", "green", 10
+)
 
-  <div class="row align-items-center">
-    
-    <div class="col-md-6 align-self-center">
-      <center>
-      <img style="max-width:340px" src="images/idn_logo.png"/>
-        </center>
-        </div>
-        
-        <div class="col-md-6 align-self-center">
-          <center>
-          <img style="max-width:340px" src="images/rse-sheffield_logo.png"/>
-            </center>
-            </div>
-            </div>
+my_edges <- tribble(
+  ~from, ~to, ~width,
+  1, 2, 5,
+  # 2, 1, 5,
+  3, 1, 1,
+  # 1, 3, 1,
+  4, 1, 6,
+  # 1, 4, 6,
+  4, 2, 3,
+  # 2, 4, 3,
+  5, 2, 2,
+  # 2, 5, 2,
+  5, 3, 5,
+  # 3, 5, 5,
+  5, 6, 5
+  # 6, 5, 5
+)
 
-<!--/html_preserve-->
-            
+visNetwork(my_nodes,
+           my_edges,
+           width = "350px",
+           height = "200px") %>%
+  visOptions(highlightNearest = list(enabled = TRUE, degree = 1)) %>%
+  visInteraction(zoomView = FALSE)
+```
 
+<br>
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+mpgman3 <- mpg %>% 
+  group_by(manufacturer) %>% 
+  summarise(n = n(), unique = length(unique(model))) %>% 
+  arrange(-n, -unique)
+## Observations: 15
+## Variables: 3
+## $ manufacturer <chr> "dodge", "toyota", "volkswagen", "ford", "chevrol...
+## $ n            <int> 37, 34, 27, 25, 19, 18, 14, 14, 13, 9, 8, 5, 4, 4, 3
+## $ unique       <int> 4, 6, 4, 4, 4, 3, 2, 2, 3, 1, 1, 1, 1, 1, 1
+
+hchart(mpgman3, "treemap", hcaes(x = manufacturer, value = n, color = unique)) %>%
+  hc_size(width = "350px", height = "200px") %>%
+  hc_legend(enabled = FALSE)
+```
+
+<br>
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+library("quantmod")
+
+usdjpy <- getSymbols("USD/JPY", src = "oanda", auto.assign = FALSE)
+eurkpw <- getSymbols("EUR/KPW", src = "oanda", auto.assign = FALSE)
+
+highchart(type = "stock") %>% 
+  hc_add_series(usdjpy, id = "usdjpy") %>% 
+  hc_add_series(eurkpw, id = "eurkpw") %>%
+  hc_size(width = "350px", height = "200px") %>%
+  hc_rangeSelector(enabled = FALSE)
+```
+
+</center>
+
+</div>
+
+</div>
+
+
+</center>
 

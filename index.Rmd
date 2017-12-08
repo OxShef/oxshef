@@ -39,14 +39,14 @@ OxShef is a collaboration between the [Interactive Data Network at University of
 
 ## Which chart should I use?
 
-[OxShef: Charts](oxshef.github.io/oxshef_charts) provides an overview of commonly used data visualisations by researchers at Oxford and Sheffield, these include:
+[OxShef: Charts](http://oxshef.github.io/oxshef_charts) provides an overview of commonly used data visualisations by researchers at Oxford and Sheffield, these include:
 
 - Charts (barcharts, piecharts, bubble charts)
 - Maps (scattergeo, choropleth, meteorological charts)
 - Time series (financial charts, time series)
 - Networks
 
-[OxShef: Charts](oxshef.github.io/oxshef_charts) provides advice on how to select the most appropriate charts for your data and how to avoid common mistakes when visualising data. There are dedicated websites to how to build visualisations with specific tools:
+[OxShef: Charts](http://oxshef.github.io/oxshef_charts) provides advice on how to select the most appropriate charts for your data and how to avoid common mistakes when visualising data. There are dedicated websites to how to build visualisations with specific tools:
 
 - R and htmlwidgets (coming soon)
 - Python and Jupyter notebooks (coming soon)

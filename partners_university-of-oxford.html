@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -118,6 +121,107 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div id="rStudioHeader" class="alwaysShrunk">
@@ -163,62 +267,31 @@ $(".main-container").removeClass("main-container").removeClass("container-fluid"
 </div>
 
 
-<p>OxShef is a collaboration between the IDN at University of Oxford and ORDA at University of Sheffield to support researchers in using interactive data visualisations to communicate research data and to increase the impact and engagement of the public with research outputs.</p>
-<p>All of our websites are built using GitHub and GitHub pages, we thoroughly welcome contributions to all of our websites through pull requests! Here’s a link to our <a href="https://github.com/OxShef">OxShef GitHub Organisation</a> where you can find all of our repositories.</p>
-<p>If you’re new to Github then the following resources might be useful:</p>
-<ul>
-<li>Github’s <a href="https://guides.github.com/activities/hello-world/">“Hello World” tutorial</a></li>
-<li>Lynda.com’s <a href="https://www.lynda.com/Git-tutorials/Up-Running-Git-GitHub/409275-2.html">Intro to Git and Github</a> (Special links: <a href="https://www.lynda.com/Git-tutorials/Up-Running-Git-GitHub/409275-2.html?org=ox.ac.uk">Oxford researchers</a>, <a href="https://www.lynda.com/course/shareredirect/409275?org=sheffield.ac.uk">Sheffield researchers</a>)</li>
-</ul>
-<hr>
-<div id="academic-publishers" class="section level2">
-<h2>Academic Publishers</h2>
-<p>OxShef provides advice to researchers on which publishers support the embedding of interactive data visualisations alongisde publications, for instance:</p>
-<ul>
-<li>F1000 announced <a href="https://blog.f1000.com/2017/07/19/so-long-static-we-now-support-interactive-ploty-figures-in-our-articles/">support for embedding plotly charts</a> in July 2017</li>
-<li>Wellcome Open Research supports <a href="https://wellcomeopenresearch.org/articles/2-26/v1">embedding Shiny apps in publications</a></li>
-</ul>
-<p><a href="https://idn.it.ox.ac.uk/events-and-news">OxShef hosts biannual events</a> that intersect researchers’ and publishers’ interests in visualisations and attempt to find common ground and goals for bridging the data gap with visualisations. OxShef has collaborated with the following organisations and institutions:</p>
-<div class="row align-items-center">
-<div class="col-xs-4 align-self-center">
-<ul>
-<li>eLife</li>
-<li>John Wiley</li>
-<li>Elsevier</li>
-<li>Wellcome Open Research</li>
-<li>Taylor &amp; Francis</li>
-<li>Sage Publishing</li>
-<li>OUP</li>
-</ul>
-</div>
-<div class="col-xs-4 align-self-center">
-<ul>
-<li>BBC</li>
-<li>Financial Times</li>
-<li>ONS</li>
-<li>Figshare</li>
-<li>OSF</li>
-</ul>
-</div>
-</div>
-<p>If you’re interested in joining us at these events or working with us to promote your support for innovative data visualisation solutions, please email us at <a href="mailto:researchsupport@it.ox.ac.uk">researchsupport@it.ox.ac.uk</a> and <a href="mailto:rse@sheffield.ac.uk">rse@sheffield.ac.uk</a>.</p>
-<hr>
-</div>
-<div id="academic-partners" class="section level2">
-<h2>Academic Partners</h2>
-<p>If you’re working in another academic institution and would like to collaborate with OxShef then please do get in touch. Both the IDN and ORDA support similar hosting solutions for the visualisation tools discussed in these websites and have deliberately designed and documented our approach so that others can replicate our success. Please email us at <a href="mailto:researchsupport@it.ox.ac.uk">researchsupport@it.ox.ac.uk</a> and <a href="mailto:rse@sheffield.ac.uk">rse@sheffield.ac.uk</a>.</p>
-<hr>
-<div class="row align-items-center">
-<div class="col-xs-6 align-self-center">
+<div class="row">
+<div class="col-sm-4 align-self-center">
 <center>
-<img style="max-width:340px" src="images/idn_logo.png"/>
+<p><img src="images/logo_university-of-oxford_web.png" width="200px"></p>
 </center>
 </div>
-<div class="col-xs-6 align-self-center">
-<center>
-<img style="max-width:340px" src="images/rse-sheffield_logo.png"/>
-</center>
+<div class="col-sm-8 align-self-center">
+<p>The <a href="http://idn.it.ox.ac.uk">Interactive Data Network</a> provides specialist support and advice for researchers at University of Oxford in the use of the interactive data visualisations. The IDN sits inside of Academic Support IT, which provides a more general advice service on research data management to researchers.</p>
+<p>To contact the IDN team please email us at <a href="mailto:researchsupport@it.ox.ac.uk">researchsupport@it.ox.ac.uk</a> and we’ll get back to you ASAP to arrange a virtual or in person meeting at your building or IT Services on Banbury Road.</p>
 </div>
+</div>
+<div id="support-for-oxford-researchers" class="section level1">
+<h1>Support for Oxford Researchers</h1>
+<p>The IDN provides support for all researchers and academics at University of Oxford in the following areas:</p>
+<div id="shiny-apps-hosting" class="section level2 tabset">
+<h2>Shiny apps hosting</h2>
+<p>Shiny allows users of R to create web applications without learning HTML, CSS or JavaScript - learn more at the dedicated Shiny website.</p>
+<p>The IDN will host Shiny apps developed by (or on behalf of) Oxford researchers provided they meet the following requirements:</p>
+<ul>
+<li>The Shiny app visualises/explains research outputs of Oxford researchers</li>
+<li>All data displayed by the app is deposited in (and accessed from) a DOI issuing data repository</li>
+<li>The code for the Shiny app is also deposited in a DOI issuing data repository</li>
+<li>The Shiny app contains the DOI for the underlying code and data</li>
+</ul>
+<p>Please visit the dedicated <a href="https://idn.it.ox.ac.uk/visualisation-showcase">IDN Showcase</a> for examples of Shiny apps built and hosted by the IDN.</p>
 </div>
 </div>
 
@@ -241,6 +314,8 @@ $(".main-container").removeClass("main-container").removeClass("container-fluid"
 <script type="text/javascript" src="//cdn.bizible.com/scripts/bizible.js" async=""></script>
 
 
+</div>
+</div>
 
 </div>
 

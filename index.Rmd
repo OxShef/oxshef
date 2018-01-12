@@ -1,5 +1,4 @@
 ---
-title: "OxShef"
 output:
   html_document:
     toc_float: false
@@ -7,11 +6,18 @@ editor_options:
   chunk_output_type: console
 ---
 
-<div class="row align-items-center">
-    
-<div class="col-md-6 align-self-center">
+<!---
+If we add the logos to the top section then these are the correct sizes!
+<center>
+<img style="height:140px;margin-top:42px" src="images/logo_university-of-oxford_web.png"/>
+<img style="height:140px;margin-top:70px;margin-bottom:70px" src="images/logo_university-of-sheffield_web.png"/>
+</center>
 
-OxShef promotes and supports the use of interactive data visualisations for communicating research datasets and outputs, our motivations are as follows:
+!-->
+
+<h2>**OxShef: dataviz** promotes and supports the use of interactive data visualisations for communicating research datasets and outputs.</h2>
+
+Our motivations are as follows:
 
 - Interactive visualisations provide an exploratory tool to your audience, rather than fixed narratives provided by traditional communication tools
 
@@ -19,17 +25,7 @@ OxShef promotes and supports the use of interactive data visualisations for comm
 
 - Interactive visualisations help bridge the "data gap" as the underlying research data must be deposited in a DOI issuing repository.
 
-OxShef is a collaboration between the [Interactive Data Network at University of Oxford](idn_info.html) and [ORDA at University of Sheffield](orda_info.html). There's hands on support and visualisation hosting services available for researchers at these institutions.
-
-</div>
-        
-<div class="col-md-6 align-self-center">
-<center>
-<img style="max-width:340px" src="images/idn_logo.png"/>
-<img style="max-width:340px" src="images/rse-sheffield_logo.png"/>
-</center>
- </div>
-</div>
+**OxShef: dataviz** is a [partnership between multiple universities](partners.html), currently including the [University of Oxford](partners_university-of-oxford.html) and [University of Sheffield](partners_university-of-sheffield.html). All of our online resources are designed for all researchers, independent on institution. However, there may be specific support in creating and hosting visualisations for home researchers which will be clearly highlighted in our materials.
           
 <hr>
 
@@ -57,7 +53,7 @@ OxShef is a collaboration between the [Interactive Data Network at University of
 
 ## Where can I host visualisations?
 
-OxShef has dedicated websites for a wide range of different visualisation hosting services, all services must meet these minimum requires:
+**OxShef: dataviz** has dedicated websites for a wide range of different visualisation hosting services, all services must meet these minimum requires:
 
 - Data behind publications can easily be cited
 - Visualisations can easily be embedded in websites
@@ -67,7 +63,7 @@ Our websites currently include:
 - Shiny: Interactive visualisations built with R
 - Dash: Interactive visualisations built with Python
 
-Typically, if there's a website about a hosting service then there'll be dedicated support for researchers at University of Oxford and/or University of Sheffield. Refer to the [IDN](idn_info.html) and [ORDA](orda_info.html) pages for a full list of services available to you.
+Typically, if there's a website dedicated to a specific visualisation hosting service then at least one [**OxShef: dataviz** partner institution](partners.html) provides support to their researchers in developing and potentially hosting content there.
 
 </div>
 </div>
@@ -76,7 +72,7 @@ Typically, if there's a website about a hosting service then there'll be dedicat
 
 ## Example charts
 
-The visualisations below are examples of what you can build by following the tutorials and advice within the OxShef websites.
+The visualisations below are examples of what you can build by following the tutorials and advice within the **OxShef: dataviz** websites.
 
 <div class="row align-items-center">
     

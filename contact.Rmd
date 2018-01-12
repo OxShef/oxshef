@@ -1,0 +1,31 @@
+---
+output:
+  html_document:
+    toc_float: false
+editor_options: 
+  chunk_output_type: console
+---
+
+<div class="row align-items-center">
+
+<div class="col-md-6">
+
+**OxShef: dataviz** is a collaboration between multiple Universities and does not have a central inbox! 
+
+If you'd like to get in touch with everyone working on the project, we recommend that you <a class="twitter-follow-button"
+  href="https://twitter.com/oxshef_dataviz"
+  data-show-count="false">
+Follow @oxshef_dataviz</a>.
+
+Alternatively, please refer to the partners pages for details of how to get in touch with support at your local University.
+
+</div>
+
+<div class="col-md-6">
+
+
+<a class="twitter-timeline" data-height="500" href="https://twitter.com/oxshef_dataviz?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+</div>

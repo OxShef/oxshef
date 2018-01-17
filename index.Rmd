@@ -294,11 +294,11 @@ hchart(mpgman3, "treemap", hcaes(x = manufacturer, value = n, color = unique)) %
 library("quantmod")
 
 usdjpy <- getSymbols("USD/JPY", src = "oanda", auto.assign = FALSE)
-eurkpw <- getSymbols("EUR/KPW", src = "oanda", auto.assign = FALSE)
+eurjpy <- getSymbols("EUR/JPY", src = "oanda", auto.assign = FALSE)
 
 highchart(type = "stock") %>% 
   hc_add_series(usdjpy, id = "usdjpy") %>% 
-  hc_add_series(eurkpw, id = "eurkpw") %>%
+  hc_add_series(eurjpy, id = "eurjpy") %>%
   hc_size(width = "350px", height = "200px") %>%
   hc_rangeSelector(enabled = FALSE)
 ```

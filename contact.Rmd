@@ -17,7 +17,7 @@ If you'd like to get in touch with everyone working on the project, we recommend
   data-show-count="false">
 Follow @oxshef_dataviz</a>.
 
-Alternatively, please refer to the partners pages for details of how to get in touch with support at your local University.
+Alternatively, please refer to the <a href='partners.html'>partners pages</a> for details of how to get in touch with support at your local University.
 
 </div>
 

@@ -26,7 +26,7 @@ Our motivations are as follows:
 - Interactive visualisations help bridge the "data gap" as the underlying research data must be deposited in a DOI issuing repository.
 
 **OxShef: dataviz** is a [partnership between multiple universities](partners.html), currently including the [University of Oxford](partners_university-of-oxford.html) and [University of Sheffield](partners_university-of-sheffield.html). All of our online resources are designed for all researchers, independent on institution. However, there may be specific support in creating and hosting visualisations for home researchers which will be clearly highlighted in our materials.
-          
+        
 <hr>
 
 <div class="row align-items-center">
@@ -60,7 +60,7 @@ In addition, there are dedicated websites to how to build visualisations with sp
 
 Our websites currently include:
 
-- Shiny: Interactive visualisations built with R
+- [Shiny: Interactive visualisations built with R](https://oxshef.github.io/oxshef_shiny)
 - Dash: Interactive visualisations built with Python
 
 Typically, if there's a website dedicated to a specific visualisation hosting service then at least one [**OxShef: dataviz** partner institution](partners.html) provides support to their researchers in developing and potentially hosting content there.
@@ -68,7 +68,65 @@ Typically, if there's a website dedicated to a specific visualisation hosting se
 </div>
 </div>
 
+<div class="row align-items-center">
+  
+<div class="col-xs-2 align-self-center">
+
+</div>
+
+<div class="col-xs-8 align-self-center">
+
+## Which publishers support interactive visualisations?
+
+**OxShef: dataviz** actively reviews the support for embedding interactive visualisations into research publications provided and promoted by publishers. We differentiate between two levels of support:
+
+- Publishers themselves creating bespoke visualisations for headline features
+- Publishers allowing researchers to embed their own visualisations
+
+Additionally, we encourage collaborations between academics and data journalists at a wide range of international media outlets. Read more on our [dedicated OxShef: Publishers website](http://oxshef.github.io/oxshef_publishers).
+
+</div>
+
+<div class="col-xs-2 align-self-center">
+
+</div>
+
+</div>
+
 <hr>
+
+## Visualisations and Reproducible Research
+
+<div class="row align-items-center">
+
+    
+<div class="col-xs-6 align-self-center">
+
+All research outputs should be uniquely identified by DOI ([Wikipedia: DOI](https://en.wikipedia.org/wiki/Digital_object_identifier)). It's essential for your data and publication to be independently citable with DOI for innumerable reasons, but here are some good examples:
+
+- Data as "supplementary materials" thoroughly undervalues the importance of the data.
+- Supplementary materials are typically limited to PDF files. PDF files are an extremely poor format for ALL data formats (tables, images or text)!
+- Many data repositories allow your data to be versioned, allowing datasets to grow and mature over time.
+
+As all with all research outputs, all researchers should be uniquely identifiable via an [ORCID](https://orcid.org). Registering your ORCID with DataCite and CrossRef provides a centralised, automatically updated bibliography of all your DOI-registered research outputs (example: https://orcid.org/0000-0002-3039-6849)
+
+Open Data and Reproducible Research are central to the goals of **OxShef: dataviz**'s work. We thoroughly recommend that the reproducible components of your visualisation outputs (i.e. the scripts and code that generate your charts/maps/diagrams) are also deposited with DOI-issuing repositories. This creates a "citation trinity" between: your research data, publication, interactive visualisations via your ORCID. 
+
+</div>
+    
+<div class="col-xs-6 align-self-center">
+
+```{r, echo=FALSE}
+knitr::include_graphics("images/rdm-trinity.png")
+```
+
+</div>
+
+</div>
+
+<hr>
+
+
 
 ## Example charts
 

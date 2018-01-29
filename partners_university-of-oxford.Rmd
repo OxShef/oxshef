@@ -1,9 +1,7 @@
 ---
 output:
   html_document:
-    toc: true
-toc_float:
-      collapsed: false
+    toc: false
 editor_options: 
   chunk_output_type: console
 ---
@@ -32,13 +30,33 @@ knitr::opts_chunk$set(
 
 <div class="col-sm-8 align-self-center">
 
-The [Interactive Data Network](http://idn.it.ox.ac.uk) provides specialist support and advice for researchers at University of Oxford in the use of the interactive data visualisations. The IDN sits inside of Academic Support IT, which provides a more general advice service on research data management to researchers.
+The University of Oxford and University of Sheffield co-founded **OxShef: dataviz** in late 2017 to provide open source tutorials and advice to researchers on using interactive data visualisations to promote engagement directly with datasets and to broaden research impact.
+
+Oxford's contribution to the project is spearheaded by Academic IT Research Support from IT Services and the [Interactive Data Network](http://idn.it.ox.ac.uk){target='_blank'}.
+
+**OxShef: dataviz** resources are designed to be of general use to all academics, however there is dedicated support available to University of Oxford researchers and academics detailed below.
+
+</div>
+
+</div>
+
+# Interactive Data Network
+
+The [Interactive Data Network](http://idn.it.ox.ac.uk) provides specialist support and advice for researchers at University of Oxford in the use of the interactive data visualisations and in good research data management/reproducible research standards.
+
+The IDN aims to host visualisations on behalf of Oxford researchers using all of the technologies covered by **OxShef:
+
+
+## Hosting of Shiny apps
+
+
+
+# Old Content
+
+
+ The IDN sits inside of Academic Support IT, which provides a more general advice service on research data management to researchers.
 
 To contact the IDN team please email us at <researchsupport@it.ox.ac.uk> and we'll get back to you ASAP to arrange a virtual or in person meeting at your building or IT Services on Banbury Road.
-
-</div>
-
-</div>
 
 # Support for Oxford Researchers
 

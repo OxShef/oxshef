@@ -1,0 +1,92 @@
+---
+title: "Training, Templates and Tutorials"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+    includes:
+      before_body: [includes/include_header.html, includes/include_header_navpage.html]
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+**OxShef: dataviz** splits our documentation over multiple websites, this page combines a high-level overview of all the things you need to know from these sites in order to design effective visualisations as part of a reproducible dataviz workflow.
+
+<div class='row'>
+
+<div class='col-sm-4'>
+
+<center><h5>[**OxShef: Charts**](oxshef-charts.netlify.com)</h5></center>
+<center><i class='fas fa-chart-area fa-2x'></i></center>
+- **OxShef: Charts** provides advice on how to select the most appropriate charts for your data and how to avoid common mistakes when visualising data.
+
+</div>
+
+<div class='col-sm-4'>
+
+<center><h5>OxShef: Tools</h5></center>
+<center><i class='fas fa-wrench fa-2x'></i></center>
+- **OxShef: Tools** provides advice on choosing data visualisations tools that [support a reproducible dataviz workflow](oxshef-tools.netlify.com/reproducible-dataviz-workflow.html).
+- **OxShef: Tools** maintains an overview of [popular data visualisation tools](oxshef-tools.netlify.com/list-of-tools.html) and dedicated websites for select technologies which fully support accessing data from DOI-issuing repositories.
+</div>
+
+<div class='col-sm-4'>
+
+<center><h5>OxShef: Publisher</h5></center>
+<center><i class='fas fa-file-pdf fa-2x'></i></center>
+- **OxShef: Publishers** provides advice on choosing publishers that [support embedding visualisations alongside publications](oxshef-publishers.netlify.com/publishers-list.html).
+- **OxShef: Publishers** also maintains an overview of [data repositories](oxshef-publishers.netlify.com/data-repositories-list.html) and their suitability for a reproducible dataviz workflow
+
+</div>
+
+</div>
+
+```{r}
+# setInternet2(use = TRUE)
+publishers_training_tutorials_and_templates <- tempfile(fileext = ".Rmd")
+# on.exit(unlink(publishers_training_tutorials_and_templates))
+download.file("https://raw.githubusercontent.com/OxShef/oxshef_publishers/master/training-tutorials-and-templates.Rmd", publishers_training_tutorials_and_templates)
+```
+
+
+```{r, echo=FALSE, results='hide'}
+# setInternet2(use = TRUE)
+tools_training_tutorials_and_templates <- tempfile(fileext = ".Rmd")
+# on.exit(unlink(tools_training_tutorials_and_templates))
+download.file("https://raw.githubusercontent.com/OxShef/oxshef_tools/master/training-tutorials-and-templates.Rmd", tools_training_tutorials_and_templates)
+```
+
+```{r}
+# setInternet2(use = TRUE)
+charts_training_tutorials_and_templates <- tempfile(fileext = ".Rmd")
+# on.exit(unlink(tools_training_tutorials_and_templates))
+download.file("https://raw.githubusercontent.com/OxShef/oxshef_charts/master/training-tutorials-and-templates.Rmd", charts_training_tutorials_and_templates)
+```
+
+# Reproducability and working with publishers
+
+```{r child = publishers_training_tutorials_and_templates}
+```
+
+# Advice on dataviz tool selection
+
+```{r child = tools_training_tutorials_and_templates}
+```
+
+# Advice on charts
+
+```{r child = charts_training_tutorials_and_templates}
+```
+

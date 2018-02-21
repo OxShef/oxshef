@@ -110,14 +110,14 @@ All research outputs should be uniquely identified by DOI ([Wikipedia: DOI](http
 
 As all with all research outputs, all researchers should be uniquely identifiable via an [ORCID](https://orcid.org). Registering your ORCID with DataCite and CrossRef provides a centralised, automatically updated bibliography of all your DOI-registered research outputs (example: https://orcid.org/0000-0002-3039-6849)
 
-Open Data and Reproducible Research are central to the goals of **OxShef: dataviz**'s work. We thoroughly recommend that the reproducible components of your visualisation outputs (i.e. the scripts and code that generate your charts/maps/diagrams) are also deposited with DOI-issuing repositories. This creates a "citation trinity" between: your research data, publication, interactive visualisations via your ORCID. 
+Open Data and Reproducible Research are central to the goals of **OxShef: dataviz**'s work. We thoroughly recommend that the reproducible components of your visualisation outputs (i.e. the scripts and code that generate your charts/maps/diagrams) are also deposited with DOI-issuing repositories.
 
 </div>
     
 <div class="col-xs-6 align-self-center">
 
 ```{r, echo=FALSE}
-knitr::include_graphics("images/rdm-trinity.png")
+knitr::include_graphics("images/rdm-for-all-outputs.png")
 ```
 
 </div>

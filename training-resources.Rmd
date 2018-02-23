@@ -28,7 +28,7 @@ knitr::opts_chunk$set(
 
 <div class='col-sm-4'>
 
-<center><h5>[**OxShef: Charts**](oxshef-charts.netlify.com)</h5></center>
+<center><h5>[**OxShef: Charts**](http://oxshef-charts.netlify.com)</h5></center>
 <center><i class='fas fa-chart-area fa-2x'></i></center>
 - **OxShef: Charts** provides advice on how to select the most appropriate charts for your data and how to avoid common mistakes when visualising data.
 
@@ -36,18 +36,18 @@ knitr::opts_chunk$set(
 
 <div class='col-sm-4'>
 
-<center><h5>OxShef: Tools</h5></center>
+<center><h5>[**OxShef: Tools**](http://oxshef-tools.netlify.com)</h5></center>
 <center><i class='fas fa-wrench fa-2x'></i></center>
-- **OxShef: Tools** provides advice on choosing data visualisations tools that [support a reproducible dataviz workflow](oxshef-tools.netlify.com/reproducible-dataviz-workflow.html).
-- **OxShef: Tools** maintains an overview of [popular data visualisation tools](oxshef-tools.netlify.com/list-of-tools.html) and dedicated websites for select technologies which fully support accessing data from DOI-issuing repositories.
+- **OxShef: Tools** provides advice on choosing data visualisations tools that [support a reproducible dataviz workflow](http://oxshef-tools.netlify.com/reproducible-dataviz-workflow.html).
+- **OxShef: Tools** maintains an overview of [popular data visualisation tools](http://oxshef-tools.netlify.com/list-of-tools.html) and dedicated websites for select technologies which fully support accessing data from DOI-issuing repositories.
 </div>
 
 <div class='col-sm-4'>
 
-<center><h5>OxShef: Publisher</h5></center>
+<center><h5>[**OxShef: Publishers**](http://oxshef-publishers.netlify.com)</h5></center>
 <center><i class='fas fa-file-pdf fa-2x'></i></center>
-- **OxShef: Publishers** provides advice on choosing publishers that [support embedding visualisations alongside publications](oxshef-publishers.netlify.com/publishers-list.html).
-- **OxShef: Publishers** also maintains an overview of [data repositories](oxshef-publishers.netlify.com/data-repositories-list.html) and their suitability for a reproducible dataviz workflow
+- **OxShef: Publishers** provides advice on choosing publishers that [support embedding visualisations alongside publications](http://oxshef-publishers.netlify.com/publishers-list.html).
+- **OxShef: Publishers** also maintains an overview of [data repositories](http://oxshef-publishers.netlify.com/data-repositories-list.html) and their suitability for a reproducible dataviz workflow
 
 </div>
 

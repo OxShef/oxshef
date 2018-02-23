@@ -54,39 +54,63 @@ knitr::opts_chunk$set(
 </div>
 
 ```{r}
-# setInternet2(use = TRUE)
 publishers_training_tutorials_and_templates <- tempfile(fileext = ".Rmd")
-# on.exit(unlink(publishers_training_tutorials_and_templates))
 download.file("https://raw.githubusercontent.com/OxShef/oxshef_publishers/master/training-tutorials-and-templates.Rmd", publishers_training_tutorials_and_templates)
 ```
 
 
 ```{r, echo=FALSE, results='hide'}
-# setInternet2(use = TRUE)
 tools_training_tutorials_and_templates <- tempfile(fileext = ".Rmd")
-# on.exit(unlink(tools_training_tutorials_and_templates))
 download.file("https://raw.githubusercontent.com/OxShef/oxshef_tools/master/training-tutorials-and-templates.Rmd", tools_training_tutorials_and_templates)
 ```
 
 ```{r}
 # setInternet2(use = TRUE)
-charts_training_tutorials_and_templates <- tempfile(fileext = ".Rmd")
-# on.exit(unlink(tools_training_tutorials_and_templates))
-download.file("https://raw.githubusercontent.com/OxShef/oxshef_charts/master/training-tutorials-and-templates.Rmd", charts_training_tutorials_and_templates)
+library("tidyverse")
+library("readxl")
+download.file("https://raw.githubusercontent.com/OxShef/oxshef_charts/master/training-tutorials-and-templates.Rmd", "training-tutorials-and-templates.Rmd")
+
+download.file("https://raw.githubusercontent.com/OxShef/oxshef_charts/master/oxshef-viz-tutorials-etc.xlsx", "oxshef-viz-tutorials-etc.xlsx")
+
+viz_tutorial_logos <- read_xlsx("oxshef-viz-tutorials-etc.xlsx") %>%
+  select(image.path) %>%
+  filter(!is.na(image.path)) %>%
+  .[[1]]
+
+add_viz_tutorial_logo <- function(logo) {
+  download.file(url = file.path(
+  "https://raw.githubusercontent.com/OxShef/oxshef_charts/master/images/table-of-viz-tutorials-etc",
+  logo
+  ),
+  destfile = file.path("images/table-of-viz-tutorials-etc", logo))
+}
+
+viz_tutorial_logos %>%
+  walk(add_viz_tutorial_logo)
+
+download.file("https://raw.githubusercontent.com/OxShef/oxshef_charts/master/images/revision-pie.png",
+              "images/revision-pie.png")
+
 ```
+
+<hr>
 
 # Reproducability and working with publishers
 
 ```{r child = publishers_training_tutorials_and_templates}
 ```
 
+<hr>
+
 # Advice on dataviz tool selection
 
 ```{r child = tools_training_tutorials_and_templates}
 ```
 
+<hr>
+
 # Advice on charts
 
-```{r child = charts_training_tutorials_and_templates}
+```{r child = "training-tutorials-and-templates.Rmd"}
 ```
 

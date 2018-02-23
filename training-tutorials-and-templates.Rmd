@@ -1,0 +1,139 @@
+---
+title: "Training, Tutorials and Templates"
+output:
+  html_document:
+    toc: false
+    toc_float:
+      collapsed: false
+    includes:
+      before_body: [includes/include_header.html, includes/include_header_navpage.html]
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+**OxShef: Charts** provides general advice on choosing the most appropriate visualisation for your data and to avoid making common mistakes or pitfalls in data viz. However, we do not provide interactive tools for matching your data to charts (or vice versa).
+
+<div class='row'>
+
+<div class='col-sm-7'>
+
+There are many tools (Excel, Google Sheets, Plotly, Tableau) which automatically suggest charts based on the properties of your dataset. This is possible thanks to excellent research into visual perception theory and machine vision from back in the [1980s](http://doi.org/10.2307/2288400) through to today.
+
+In fact, some tools like [ReVision](https://doi.org/10.1145/2047196.2047247) are even capable of taking existing charts and re-designing them to be more accessible and easy to read by humans. The example here shows a number of badly designed pie charts that have been converted into much easier to understand barcharts.  
+
+</div>
+
+<div class='col-sm-5'>
+
+<img src='images/revision-pie.png'></img>
+
+</div>
+
+</div>
+
+**OxShef: Charts** maintains a collection of tools and resources to assist you in developing and designing effective visualisations, split into the following three categories:
+
+<!-- There are many excellent tools which can help  -->
+
+<!-- **OxShef: Charts** is designed to help you select the most appropriate visualisations for your data, primarily by using the [Financial Times' Visual Vocabulary](http://ft-interactive.github.io/visual-vocabulary/) and roughly dividing dataviz into the following categories; Charts, Geoviz (Maps), Networks and Time Series. Unfortunately, this is not sufficient advice for us to guarantee you select the best (and effectively designed) dataviz. There are a number of third-party resources and tutorials that we split into the following three categories: -->
+
+<div class='row'>
+
+<div class='col-sm-4'>
+
+<center><h5>Choosing a dataviz</h5></center>
+<center><i class='fas fa-search fa-2x'></i></i></center>
+Some charts are more suitable for specific purposes than others. In some cases these resources can automate the chart selection process, or at least help exclude some chart options.
+
+</div>
+
+<div class='col-sm-4'>
+
+<center><h5>Designing good dataviz</h5></center>
+<center><i class='fas fa-eye fa-2x'></i></i></center>
+There are many best practices for dataviz which radically improve the legibility of a chart, for instance: horizontal barcharts with bars arranged from longest to shortest are significantly easier to interpet than unordered vertical barcharts.
+
+</div>
+
+<div class='col-sm-4'>
+<center><h5>Adding interactivity</h5></center>
+<center><i class='fas fa-magic fa-2x'></i></i></center>
+Sadly, there's little general advice for effectively adding interactivity to charts. However, two extremely useful rules of thumb are ["Make the least interactive thing that works"](https://twitter.com/brianboyer/status/784874560009150464) ([\@BrianBoyer](https://twitter.com/brianboyer)) and Ben Shneiderman's mantra [Overview first, zoom and filter, then details-on-demand](https://doi.org/10.1109/VL.1996.545307).
+
+</div>
+
+</div>
+
+```{r viz-tools-DT, echo = FALSE}
+library("tidyverse")
+library("DT")
+library("readxl")
+
+fa_scripting <- "<i class='fa fa-file-code fa-2x'></i>"
+fa_pointAndClick <- "<i class='fa fa-hand-pointer fa-2x'></i>"
+
+fa_icons <- tribble(
+  ~advice.type, ~type,
+  "Choosing a dataviz", "<i class='fa fa-search fa-2x'></i>",
+  "Designing good dataviz", "<i class='fa fa-eye fa-2x'></i>",
+  "Adding interactivity", "<i class='fa fa-magic fa-2x'></i>"
+)
+
+oxshef_viz_resources <- read_xlsx("oxshef-viz-tutorials-etc.xlsx")
+
+
+oxshef_viz_resources %>%
+  arrange(name) %>%
+  mutate(logo = ifelse(is.na(image.path), {
+    paste0(
+      "<a href='", url, "' target='_blank'>",
+      "<h5>", name, "</h5>",
+      "</a>"
+    )
+  }, {
+    paste0(
+      "<a href='", url, "' target='_blank'>",
+      "<h5>", name, "</h5>",
+      "<img src='images/table-of-viz-tutorials-etc/", image.path, "' style='max-height:150px'></img>",
+      "</a>"
+    )
+  })) %>%
+  left_join(fa_icons) %>%
+  select(-url, -advice.type, -image.path, -name) %>%
+  select(logo, decription, resource.description, type) %>%
+  datatable(
+    escape = FALSE,
+    rownames = FALSE,
+    colnames = c(
+      "Resources",
+      "Description",
+      "Resource description",
+      "Type of Advice"
+    ),
+    options = list(
+      scrollX = TRUE,
+      autoWidth = TRUE,
+      columnDefs = list(
+        list(width = "150px", targets = c(0)),
+        list(width = "550px", targets = c(1)),
+        list(width = "100px", targets = c(3)),
+        list(className = "dt-center", targets = c(0, 3))
+      ),
+      dom = "t"
+    ),
+    width = "100%"
+  )
+
+
+```
+

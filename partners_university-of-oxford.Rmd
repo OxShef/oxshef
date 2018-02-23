@@ -43,34 +43,3 @@ Oxford's contribution to the project is spearheaded by Academic IT Research Supp
 # Interactive Data Network
 
 The [Interactive Data Network](http://idn.it.ox.ac.uk) provides specialist support and advice for researchers at University of Oxford in the use of the interactive data visualisations and in good research data management/reproducible research standards.
-
-The IDN aims to host visualisations on behalf of Oxford researchers using all of the technologies covered by **OxShef:
-
-
-## Hosting of Shiny apps
-
-
-
-# Old Content
-
-
- The IDN sits inside of Academic Support IT, which provides a more general advice service on research data management to researchers.
-
-To contact the IDN team please email us at <researchsupport@it.ox.ac.uk> and we'll get back to you ASAP to arrange a virtual or in person meeting at your building or IT Services on Banbury Road.
-
-# Support for Oxford Researchers
-
-The IDN provides support for all researchers and academics at University of Oxford in the following areas:
-
-## Shiny apps hosting {.tabset}
-
-Shiny allows users of R to create web applications without learning HTML, CSS or JavaScript - learn more at the dedicated Shiny website.
-
-The IDN will host Shiny apps developed by (or on behalf of) Oxford researchers provided they meet the following requirements:
-
-- The Shiny app visualises/explains research outputs of Oxford researchers
-- All data displayed by the app is deposited in (and accessed from) a DOI issuing data repository
-- The code for the Shiny app is also deposited in a DOI issuing data repository
-- The Shiny app contains the DOI for the underlying code and data
-
-Please visit the dedicated [IDN Showcase](https://idn.it.ox.ac.uk/visualisation-showcase) for examples of Shiny apps built and hosted by the IDN.

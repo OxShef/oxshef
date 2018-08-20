@@ -35,7 +35,7 @@ Our motivations are as follows:
 
 ## Which chart should I use?
 
-[OxShef: Charts](http://oxshef.github.io/oxshef_charts) provides advice on how to select the most appropriate charts for your data and how to avoid common mistakes when visualising data. Subjects covered include:
+[OxShef: Charts](http://charts.oxshef.io) provides advice on how to select the most appropriate charts for your data and how to avoid common mistakes when visualising data. Subjects covered include:
 
 - Charts (barcharts, piecharts, bubble charts)
 - Maps (scattergeo, choropleth, meteorological charts)
@@ -60,7 +60,7 @@ In addition, there are dedicated websites to how to build visualisations with sp
 
 Our websites currently include:
 
-- [Shiny: Interactive visualisations built with R](https://oxshef.github.io/oxshef_shiny)
+- [Shiny: Interactive visualisations built with R](https://shiny.oxshef.io)
 - Dash: Interactive visualisations built with Python
 
 Typically, if there's a website dedicated to a specific visualisation hosting service then at least one [**OxShef: dataviz** partner institution](partners.html) provides support to their researchers in developing and potentially hosting content there.
@@ -83,7 +83,7 @@ Typically, if there's a website dedicated to a specific visualisation hosting se
 - Publishers themselves creating bespoke visualisations for headline features
 - Publishers allowing researchers to embed their own visualisations
 
-Additionally, we encourage collaborations between academics and data journalists at a wide range of international media outlets. Read more on our [dedicated OxShef: Publishers website](http://oxshef.github.io/oxshef_publishers).
+Additionally, we encourage collaborations between academics and data journalists at a wide range of international media outlets. Read more on our [dedicated OxShef: Publishers website](http://publishers.oxshef.io).
 
 </div>
 

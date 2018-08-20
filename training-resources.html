@@ -25,11 +25,14 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/htmlwidgets-0.9/htmlwidgets.js"></script>
-<script src="site_libs/datatables-binding-0.2/datatables.js"></script>
-<link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="site_libs/dt-core-1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="site_libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.4/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
 
 <meta name="description" content="OxShef promotes and supports the use of interactive data visualisations for communicating research datasets and outputs. This is a collaboration between University of Oxford and University of Sheffield, with dedicated support for hosting visualisations for researchers at these universities on a number of different services." />
 
@@ -104,6 +107,9 @@ img {
 }
 .tabbed-pane {
   padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
 }
 button.code-folding-btn:focus {
   outline: none;
@@ -289,7 +295,7 @@ $(".main-container").removeClass("main-container").removeClass("container-fluid"
 <div class="col-sm-4">
 <center>
 <h5>
-<a href="http://oxshef-charts.netlify.com"><strong>OxShef: Charts</strong></a>
+<a href="https://charts.oxshef.io"><strong>OxShef: Charts</strong></a>
 </h5>
 </center>
 <center>
@@ -302,7 +308,7 @@ $(".main-container").removeClass("main-container").removeClass("container-fluid"
 <div class="col-sm-4">
 <center>
 <h5>
-<a href="http://oxshef-tools.netlify.com"><strong>OxShef: Tools</strong></a>
+<a href="https://tools.oxshef.io"><strong>OxShef: Tools</strong></a>
 </h5>
 </center>
 <center>
@@ -316,7 +322,7 @@ $(".main-container").removeClass("main-container").removeClass("container-fluid"
 <div class="col-sm-4">
 <center>
 <h5>
-<a href="http://oxshef-publishers.netlify.com"><strong>OxShef: Publishers</strong></a>
+<a href="http://publishers.oxshef.io"><strong>OxShef: Publishers</strong></a>
 </h5>
 </center>
 <center>
@@ -342,13 +348,13 @@ $(".main-container").removeClass("main-container").removeClass("container-fluid"
 </div>
 <div id="advice-on-dataviz-tool-selection" class="section level1">
 <h1>Advice on dataviz tool selection</h1>
-<p><strong>OxShef: Tools</strong> cannot be a complete overview of all visualisation tools available, nor can we maintain a complete overview of training and templates available for the dataviz tools that meet our <a href="oxshef-tools.netlify.com/reproducible-dataviz-workflow.html">reproducible dataviz workflow criteria</a>. However, you might find these resources generally useful:</p>
+<p><strong>OxShef: Tools</strong> cannot be a complete overview of all visualisation tools available, nor can we maintain a complete overview of training and templates available for the dataviz tools that meet our <a href="https://oxshef-tools.netlify.com/reproducible-dataviz-workflow.html">reproducible dataviz workflow criteria</a>. However, you might find these resources generally useful:</p>
 <ul>
 <li><p><a href="https://github.com/sindresorhus/awesome">Awesome Lists (Data Viz)</a>: This is a crowd sourced collection of resources about data visualisation tools, tutorials and other resources. It’s maintained via GitHub, so anyone can contribute.</p></li>
-<li><p><a href="Lynda.com" class="uri">Lynda.com</a>: Subscription learning service with courses on a wide variety of dataviz tools, many Universities provide access to Lynda.com for free. Contact your local research support teams for support.</p></li>
-<li><p><a href="datacamp.com">Datacamp.com</a>: Subscription learning service with courses on a variety of dataviz tools.</p></li>
+<li><p><a href="https://Lynda.com">Lynda.com</a>: Subscription learning service with courses on a wide variety of dataviz tools, many Universities provide access to Lynda.com for free. Contact your local research support teams for support.</p></li>
+<li><p><a href="https://datacamp.com">Datacamp.com</a>: Subscription learning service with courses on a variety of dataviz tools.</p></li>
 </ul>
-<p>Materials specific to dataviz tools that meet our <a href="oxshef-tools.netlify.com/reproducible-dataviz-workflow.html">reproducible dataviz workflow criteria</a>.</p>
+<p>Materials specific to dataviz tools that meet our <a href="https://oxshef-tools.netlify.com/reproducible-dataviz-workflow.html">reproducible dataviz workflow criteria</a>.</p>
 <div id="section" class="section level2 tabset">
 <h2></h2>
 <div id="dash" class="section level3">
@@ -358,7 +364,7 @@ $(".main-container").removeClass("main-container").removeClass("container-fluid"
 </div>
 <div id="jupyter" class="section level3">
 <h3>Jupyter</h3>
-<p><a href="jupyter.org">Jupyter</a> notebooks are the successor to iPython notebooks, a <em>literate programming</em> technology that allows text, code, charts and interactive content to be combined together into a single document. Jupyter allows code from multiple languages to be combined in the same document, the easiest to use languaes are <strong>Julia</strong>, <strong>Python</strong> and <strong>R</strong>. Using a combination of these technologies it is possible to build rich, interactive data visualisations. With some additional effort it is possible to host Jupyter notebooks in such a fashion that enables a <a href="oxshef-tools.netlify.com/reproducible-dataviz-workflow.html">reproducible dataviz workflow</a>.</p>
+<p><a href="jupyter.org">Jupyter</a> notebooks are the successor to iPython notebooks, a <em>literate programming</em> technology that allows text, code, charts and interactive content to be combined together into a single document. Jupyter allows code from multiple languages to be combined in the same document, the easiest to use languaes are <strong>Julia</strong>, <strong>Python</strong> and <strong>R</strong>. Using a combination of these technologies it is possible to build rich, interactive data visualisations. With some additional effort it is possible to host Jupyter notebooks in such a fashion that enables a <a href="https://oxshef-tools.netlify.com/reproducible-dataviz-workflow.html">reproducible dataviz workflow</a>.</p>
 <p><strong>OxShef: dataviz</strong> are currently drafting a dedicated site with training, tutorials and templates for using Jupyter in a reproducible dataviz workfow. In the meantime, you might find this <a href="https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook">Datacamp.com free tutorial</a> useful and there is also a Lynda.com course that introduces the basics of Jupyter notebooks</p>
 <iframe width="560" height="315" src="https://www.lynda.com/player/embed/543336?fs=3&amp;w=560&amp;h=315&amp;ps=paused&amp;utm_medium=referral&amp;utm_source=embed+video&amp;utm_campaign=ldc-website&amp;utm_content=vid-543336" mozallowfullscreen="true" webkitallowfullscreen="true" allowfullscreen="true" frameborder="0">
 </iframe>
@@ -368,7 +374,7 @@ $(".main-container").removeClass("main-container").removeClass("container-fluid"
 </div>
 <div id="shiny" class="section level3">
 <h3>Shiny</h3>
-<p><a href="shiny.rstudio.com">Shiny</a> is an <code>R</code> library developed by RStudio that allows R users to create interactive web applications without having to learn HTML, CSS or JavaScript. <a href="oxshef-shiny.netlify.com"><strong>OxShef: Shiny</strong></a> provides a host of training, tutorials and templates for creating Shiny apps within the context of a fully <a href="oxshef-tools.netlify.com/reproducible-dataviz-workflow.html">reproducible dataviz workflow</a>.</p>
+<p><a href="shiny.rstudio.com">Shiny</a> is an <code>R</code> library developed by RStudio that allows R users to create interactive web applications without having to learn HTML, CSS or JavaScript. <a href="https://oxshef-shiny.netlify.com"><strong>OxShef: Shiny</strong></a> provides a host of training, tutorials and templates for creating Shiny apps within the context of a fully <a href="https://oxshef-tools.netlify.com/reproducible-dataviz-workflow.html">reproducible dataviz workflow</a>.</p>
 <p>There are many excellent resources for learning more (and keeping up to date with) Shiny:</p>
 <ul>
 <li><a href="https://github.com/grabear/awesome-rshiny">Awesome Shiny Resources</a>: This is a crowd sourced collection of resources for Shiny users.</li>
@@ -436,8 +442,8 @@ Adding interactivity
 <p>Sadly, there’s little general advice for effectively adding interactivity to charts. However, two extremely useful rules of thumb are <a href="https://twitter.com/brianboyer/status/784874560009150464">“Make the least interactive thing that works”</a> (<a href="https://twitter.com/brianboyer">@BrianBoyer</a>) and Ben Shneiderman’s mantra <a href="https://doi.org/10.1109/VL.1996.545307">Overview first, zoom and filter, then details-on-demand</a>.</p>
 </div>
 </div>
-<div id="htmlwidget-0390c5ed48b67d8b4c12" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0390c5ed48b67d8b4c12">{"x":{"filter":"none","data":[["<a href='https://doi.org/10.1109/VL.1996.545307' target='_blank'><h5>Ben Shneiderman's mantra<\/h5><\/a>","<a href='http://chartmaker.visualisingdata.com/' target='_blank'><h5>Chart Maker (Visualising Data)<\/h5><img src='images/table-of-viz-tutorials-etc/chartmaker-logo.jpg' style='max-height:150px'><\/img><\/a>","<a href='https://eagereyes.org' target='_blank'><h5>Eager Eyes<\/h5><img src='images/table-of-viz-tutorials-etc/eager-eyes-logo.png' style='max-height:150px'><\/img><\/a>","<a href='https://github.com/ft-interactive/chart-doctor/blob/master/visual-vocabulary/Visual-vocabulary.pdf' target='_blank'><h5>Financial Times Visual Vocabulary<\/h5><img src='images/table-of-viz-tutorials-etc/ft-vocabulary-logo.png' style='max-height:150px'><\/img><\/a>","<a href='https://github.com/archietse/malofiej-2016/blob/master/tse-malofiej-2016-slides.pdf' target='_blank'><h5>Why We Are Doing Fewer Interactives <br> Archie Tse<\/h5><\/a>"],["<a href='https://doi.org/10.1109/VL.1996.545307' target='_blank'>Ben Shneiderman's mantra<\/a> is one of the few general purpose pieces of advice for adding interactivity to dataviz:\r\n<br>\r\n<blockquote>Overview first, zoom and filter, then details-on-demand<\/blockquote>","Andy Kirk designed and maintains the Chart Maker as a tool for selecting data visualisation tools based on specific charts. Andy has put a lot of effort into designing minimal explanations of each chart, this is a great reference tool when selecting both charts and dataviz tools.","Eager Eyes provides long-form articles and investigations into a wide variety of data visualisation topics and best practices. This website is not only useful for designing good dataviz, but also in choosing which chart to use in the first place.","The Financial Times has invested significantly in their data visualisation toolkit, part of which is a \"visual vocabulary\" that they use to help automatically choose the most appropriate dataviz for each dataset. In the future the FT are planning on open sourcing their tools based on this visual vocabularly, for the time being this remains a useful cheat sheet.","Archie Tse from the New York Times spoke at the 26th Infographics World Summit in 2016 about how their team has reduced the number of interactives they've developed in response to user testing. Archie's overall advice can be summed up as \"if anything other than scrolling is required, make something spectacular happen\"."],["Research paper","Interactive tool for comparing different charts","Robert Kosara’s website and blog dedicated to long-form articles on data viz.","Poster presenting the Financial Times' taxonomy of dataviz types.","Conference presentation"],["<i class='fa fa-magic fa-2x'><\/i>","<i class='fa fa-search fa-2x'><\/i>","<i class='fa fa-eye fa-2x'><\/i>","<i class='fa fa-search fa-2x'><\/i>","<i class='fa fa-magic fa-2x'><\/i>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Resources<\/th>\n      <th>Description<\/th>\n      <th>Resource description<\/th>\n      <th>Type of Advice<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"autoWidth":true,"columnDefs":[{"width":"150px","targets":0},{"width":"550px","targets":1},{"width":"100px","targets":3},{"className":"dt-center","targets":[0,3]}],"dom":"t","order":[],"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-1b16bf1a907a987efa76" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1b16bf1a907a987efa76">{"x":{"filter":"none","data":[["<a href='https://doi.org/10.1109/VL.1996.545307' target='_blank'><h5>Ben Shneiderman's mantra<\/h5><\/a>","<a href='http://chartmaker.visualisingdata.com/' target='_blank'><h5>Chart Maker (Visualising Data)<\/h5><img src='images/table-of-viz-tutorials-etc/chartmaker-logo.jpg' style='max-height:150px'><\/img><\/a>","<a href='https://eagereyes.org' target='_blank'><h5>Eager Eyes<\/h5><img src='images/table-of-viz-tutorials-etc/eager-eyes-logo.png' style='max-height:150px'><\/img><\/a>","<a href='https://github.com/ft-interactive/chart-doctor/blob/master/visual-vocabulary/Visual-vocabulary.pdf' target='_blank'><h5>Financial Times Visual Vocabulary<\/h5><img src='images/table-of-viz-tutorials-etc/ft-vocabulary-logo.png' style='max-height:150px'><\/img><\/a>","<a href='https://github.com/archietse/malofiej-2016/blob/master/tse-malofiej-2016-slides.pdf' target='_blank'><h5>Why We Are Doing Fewer Interactives <br> Archie Tse<\/h5><\/a>"],["<a href='https://doi.org/10.1109/VL.1996.545307' target='_blank'>Ben Shneiderman's mantra<\/a> is one of the few general purpose pieces of advice for adding interactivity to dataviz:\r\n<br>\r\n<blockquote>Overview first, zoom and filter, then details-on-demand<\/blockquote>","Andy Kirk designed and maintains the Chart Maker as a tool for selecting data visualisation tools based on specific charts. Andy has put a lot of effort into designing minimal explanations of each chart, this is a great reference tool when selecting both charts and dataviz tools.","Eager Eyes provides long-form articles and investigations into a wide variety of data visualisation topics and best practices. This website is not only useful for designing good dataviz, but also in choosing which chart to use in the first place.","The Financial Times has invested significantly in their data visualisation toolkit, part of which is a \"visual vocabulary\" that they use to help automatically choose the most appropriate dataviz for each dataset. In the future the FT are planning on open sourcing their tools based on this visual vocabularly, for the time being this remains a useful cheat sheet.","Archie Tse from the New York Times spoke at the 26th Infographics World Summit in 2016 about how their team has reduced the number of interactives they've developed in response to user testing. Archie's overall advice can be summed up as \"if anything other than scrolling is required, make something spectacular happen\"."],["Research paper","Interactive tool for comparing different charts","Robert Kosara’s website and blog dedicated to long-form articles on data viz.","Poster presenting the Financial Times' taxonomy of dataviz types.","Conference presentation"],["<i class='fa fa-magic fa-2x'><\/i>","<i class='fa fa-search fa-2x'><\/i>","<i class='fa fa-eye fa-2x'><\/i>","<i class='fa fa-search fa-2x'><\/i>","<i class='fa fa-magic fa-2x'><\/i>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Resources<\/th>\n      <th>Description<\/th>\n      <th>Resource description<\/th>\n      <th>Type of Advice<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"autoWidth":true,"columnDefs":[{"width":"150px","targets":0},{"width":"550px","targets":1},{"width":"100px","targets":3},{"className":"dt-center","targets":[0,3]}],"dom":"t","order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 
   </div> <!-- articleBandContent -->
@@ -445,7 +451,7 @@ Adding interactivity
 
 <div id="rStudioFooter" class="band full">
 <div class="bandContent">
-  <h4><a href="oxshef.github.io" target="_blank" style="color:#fff;font-weight:bold">OxShef</a></h4>
+  <h4><a href="oxshef.io" target="_blank" style="color:#fff;font-weight:bold">OxShef</a></h4>
   <div id="logos">
     <!--<a href="https://twitter.com/rstudio" class="footerLogo twitter"></a>!-->
     <a href="https://github.com/OxShef/oxshef_rmd_template" class="footerLogo gitHub"></a>

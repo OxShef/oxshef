@@ -31,7 +31,7 @@ Our motivations are as follows:
 
 - Interactive dataviz help bridge the "data gap" as the underlying research data must be deposited in a DOI issuing repository.
 
-**OxShef: dataviz** is a [partnership between multiple universities](partners.html), currently the [University of Oxford](partners_university-of-oxford.html) and [University of Sheffield](partners_university-of-sheffield.html). Our resources are designed for all researchers who are interested in reproducible research and dataviz - irresepective of your home institution.
+**OxShef: dataviz** is a [partnership between multiple universities](http://partners.oxshef.io), currently the [University of Oxford](https://partners.oxshef.io/partners_university-of-oxford.html) and [University of Sheffield](https://partners.oxshef.io/partners_university-of-sheffield.html). Our resources are designed for all researchers who are interested in reproducible research and dataviz - irresepective of your home institution.
 
 </div>
     

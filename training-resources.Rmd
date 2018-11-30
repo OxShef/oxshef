@@ -2,10 +2,6 @@
 title: "Training, Templates and Tutorials"
 output:
   html_document:
-    toc: true
-    toc_depth: 2
-    toc_float:
-      collapsed: false
     includes:
       before_body: [includes/include_header.html, includes/include_header_navpage.html]
 editor_options: 
@@ -26,29 +22,39 @@ knitr::opts_chunk$set(
 
 <div class='row'>
 
-<div class='col-sm-4'>
+<div class='col-sm-6'>
 
 <center><h5>[**OxShef: Charts**](https://charts.oxshef.io)</h5></center>
 <center><i class='fas fa-chart-area fa-2x'></i></center>
-- **OxShef: Charts** provides advice on how to select the most appropriate charts for your data and how to avoid common mistakes when visualising data.
+**charts.oxshef.io** provides advice on how to select the most appropriate charts for your data and how to avoid common mistakes when visualising data.
 
 </div>
 
-<div class='col-sm-4'>
+<div class='col-sm-6'>
 
 <center><h5>[**OxShef: Tools**](https://tools.oxshef.io)</h5></center>
 <center><i class='fas fa-wrench fa-2x'></i></center>
-- **OxShef: Tools** provides advice on choosing data visualisations tools that [support a reproducible dataviz workflow](http://oxshef-tools.netlify.com/reproducible-dataviz-workflow.html).
-- **OxShef: Tools** maintains an overview of [popular data visualisation tools](http://oxshef-tools.netlify.com/list-of-tools.html) and dedicated websites for select technologies which fully support accessing data from DOI-issuing repositories.
+**tools.oxshef.io** provides advice on choosing data visualisations tools that [support a reproducible dataviz workflow](http://oxshef-tools.netlify.com/reproducible-dataviz-workflow.html)
 </div>
 
-<div class='col-sm-4'>
+</div>
+
+<div class='row'>
+
+<div class='col-sm-6'>
 
 <center><h5>[**OxShef: Publishers**](http://publishers.oxshef.io)</h5></center>
 <center><i class='fas fa-file-pdf fa-2x'></i></center>
-- **OxShef: Publishers** provides advice on choosing publishers that [support embedding visualisations alongside publications](http://oxshef-publishers.netlify.com/publishers-list.html).
-- **OxShef: Publishers** also maintains an overview of [data repositories](http://oxshef-publishers.netlify.com/data-repositories-list.html) and their suitability for a reproducible dataviz workflow
+**publishers.oxshef.io** provides advice on choosing publishers that support embedding visualisations alongside publications.
 
+
+</div>
+
+<div class='col-sm-6'>
+
+<center><h5>[**OxShef: Repositories**](http://repositories.oxshef.io)</h5></center>
+<center><i class='fas fa-database fa-2x'></i></center>
+**repositories.oxshef.io** provides an overview of DOI, ORCIDs and offers support in choosing the most appropriate data repository for your data.
 </div>
 
 </div>
@@ -95,9 +101,9 @@ download.file("https://raw.githubusercontent.com/OxShef/oxshef_charts/master/ima
 
 <hr>
 
-# Reproducability and working with publishers
+# Advice on charts
 
-```{r child = publishers_training_tutorials_and_templates}
+```{r child = "training-tutorials-and-templates.Rmd"}
 ```
 
 <hr>
@@ -109,8 +115,8 @@ download.file("https://raw.githubusercontent.com/OxShef/oxshef_charts/master/ima
 
 <hr>
 
-# Advice on charts
+# Reproducability and working with publishers
 
-```{r child = "training-tutorials-and-templates.Rmd"}
+```{r child = publishers_training_tutorials_and_templates}
 ```
 

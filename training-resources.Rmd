@@ -18,6 +18,8 @@ knitr::opts_chunk$set(
 
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
+## Training, Templates and Tutorials
+
 **OxShef: dataviz** splits our documentation over multiple websites, this page combines a high-level overview of all the things you need to know from these sites in order to design effective visualisations as part of a reproducible dataviz workflow.
 
 <div class='row'>

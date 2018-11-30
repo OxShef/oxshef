@@ -21,6 +21,8 @@ knitr::opts_chunk$set(
 
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
+## Training, Templates and Tutorials
+
 **OxShef: Charts** provides general advice on choosing the most appropriate visualisation for your data and to avoid making common mistakes or pitfalls in data viz. However, we do not provide interactive tools for matching your data to charts (or vice versa).
 
 <div class='row'>
